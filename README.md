@@ -60,7 +60,7 @@ Scalable and Extensible: The Social Network API is built using Node.js and Expre
 
 The server should now be running on the specified port (e.g., http://localhost:3001).
 
-With the server running, you can use a REST to send HTTP requests to the API endpoints. 
+With the server running, you can use Insomnia to send HTTP requests to the API endpoints. 
 
 Watch the [walkthrough video]() to see the routes.
 
