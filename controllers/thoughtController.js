@@ -49,6 +49,32 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
+
+  addReaction: async (req, res) => {
+    try {
+      const updatedThought = await Thought.findByIdAndUpdate(
+        req.params.thoughtId,
+        { $push: { reactions: req.body } },
+        { new: true }
+      );
+      res.status(201).json(updatedThought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
+
+  removeReaction: async (req, res) => {
+    try {
+      const updatedThought = await Thought.findByIdAndUpdate(
+        req.params.thoughtId,
+        { $pull: { reactions: { _id: req.params.reactionId } } },
+        { new: true }
+      );
+      res.status(200).json(updatedThought);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
 };
 
 module.exports = thoughtController;
