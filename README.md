@@ -70,16 +70,16 @@ Watch the [walkthrough video]() to see the routes.
 * Database: MongoDB
 * Object Data Modeling (ODM) library: Mongoose
 
-  ## Contributers 
+## Contributers 
 
   Boiler plate code from University of Minnesota Bootcamp Module-18 Mini Project 
 
-  ## License 
+## License 
   
   Copyright (c)
   [MIT](https://opensource.org/licenses/MIT)
 
-  ## Questions 
+## Questions 
 
   You can visit my Github Profile here: [mcquo011](https://github.com/mcquo011/) 
   If you have any questions please email me at omcquown@gmail.com
