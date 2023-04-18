@@ -63,32 +63,32 @@ const userController = {
   },
   addFriend: async (req, res) => {
     try {
-      const currentUser = await User.findById(req.params.userId);
-      const friendToAdd = await User.findById(req.params.friendId);
+      const currentUser = await User.findOneAndUpdate(
+        { _id: req.params.userId },
+        { $addToSet: { friends: req.params.friendId } },
+        { new: true }
+      );
 
-      if (!currentUser || !friendToAdd) {
-        return res.status(404).json({ message: "User or friend not found" });
+      if (!currentUser) {
+        return res.status(404).json({ message: "User not found" });
       }
-
-      currentUser.friends.addToSet(friendToAdd._id);
-      await currentUser.save();
 
       res.json({ message: "Friend added" });
     } catch (err) {
       res.status(500).json(err);
     }
   },
-
   removeFriend: async (req, res) => {
     try {
-      const currentUser = await User.findById(req.params.userId);
+      const currentUser = await User.findOneAndUpdate(
+        { _id: req.params.userId },
+        { $pull: { friends: req.params.friendId } },
+        { new: true }
+      );
 
       if (!currentUser) {
         return res.status(404).json({ message: "User not found" });
       }
-
-      currentUser.friends.pull(req.params.friendId);
-      await currentUser.save();
 
       res.json({ message: "Friend removed" });
     } catch (err) {
