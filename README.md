@@ -1,13 +1,14 @@
 # Socail Network API
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+  [Walkthrough Video]()
+
  ## Table of Contents 📑
 
   * [Description](#description)
   * [Dependencies](#dependencies)
   * [Usage](#usage)
   * [Contributers](#contributers)
-  * [Test](#tests)
   * [License](#license)
   * [Questions](#questions)
 
@@ -59,6 +60,8 @@ Scalable and Extensible: The Social Network API is built using Node.js and Expre
 The server should now be running on the specified port (e.g., http://localhost:3001).
 
 With the server running, you can use a REST to send HTTP requests to the API endpoints. 
+
+Watch the [walkthrough video]() to see the routes.
 
   ## Contributers 
 
