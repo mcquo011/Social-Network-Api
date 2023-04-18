@@ -8,6 +8,7 @@
   * [Description](#description)
   * [Dependencies](#dependencies)
   * [Usage](#usage)
+  * [Built With](#built-with)
   * [Contributers](#contributers)
   * [License](#license)
   * [Questions](#questions)
@@ -62,6 +63,12 @@ The server should now be running on the specified port (e.g., http://localhost:3
 With the server running, you can use a REST to send HTTP requests to the API endpoints. 
 
 Watch the [walkthrough video]() to see the routes.
+
+## Built With
+
+* Backend framework: Express.js
+* Database: MongoDB
+* Object Data Modeling (ODM) library: Mongoose
 
   ## Contributers 
 
