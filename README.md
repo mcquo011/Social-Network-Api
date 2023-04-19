@@ -27,7 +27,7 @@ Reaction Management: The API supports adding, updating, and deleting reactions t
 
 Friend Management: Users can maintain a list of friends by adding and removing other users to and from their friend lists.
 
-Scalable and Extensible: The Social Network API is built using Node.js and Express, providing a scalable and extensible foundation for future growth and additional features.
+The Social Network API is built using Node.js and Express, providing a scalable and extensible foundation for future growth and additional features.
 
   ## Dependencies  
 
