@@ -21,7 +21,7 @@ const thoughtController = {
 
   getThoughtById: async (req, res) => {
     try {
-      const thought = await Thought.findById(req.params.id);
+      const thought = await Thought.findById(req.params.thoughtId);
       res.json(thought);
     } catch (err) {
       res.status(500).json(err);
@@ -31,7 +31,7 @@ const thoughtController = {
   updateThought: async (req, res) => {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(
-        req.params.id,
+        req.params.thoughtId,
         req.body,
         { new: true }
       );
@@ -43,7 +43,7 @@ const thoughtController = {
 
   deleteThought: async (req, res) => {
     try {
-      await Thought.findByIdAndDelete(req.params.id);
+      await Thought.findByIdAndDelete(req.params.thoughtId);
       res.json({ message: "Thought deleted" });
     } catch (err) {
       res.status(500).json(err);

@@ -26,7 +26,8 @@ const userSchema = new Schema({
       ref: "User",
     },
   ],
-});
+}
+);
 
 const User = mongoose.model("User", userSchema);
 

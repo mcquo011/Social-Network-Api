@@ -1,7 +1,7 @@
 # Socail Network API
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-  [Walkthrough Video]()
+  [Walkthrough Video](https://watch.screencastify.com/v/pATRDkZfmbau2vVasmqz)
 
  ## Table of Contents 📑
 
@@ -62,7 +62,7 @@ The server should now be running on the specified port (e.g., http://localhost:3
 
 With the server running, you can use Insomnia to send HTTP requests to the API endpoints. 
 
-Watch the [walkthrough video]() to see the routes.
+Watch the [walkthrough video](https://watch.screencastify.com/v/pATRDkZfmbau2vVasmqz) to see the requests.
 
 ## Built With
 

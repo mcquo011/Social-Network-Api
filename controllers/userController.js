@@ -20,7 +20,9 @@ const userController = {
 
   getUserById: async (req, res) => {
     try {
-      const user = await User.findById(req.params.userId);
+        const user = await User.findById(req.params.userId).populate(
+          "thoughts friends"
+        );
       res.json(user);
     } catch (err) {
       res.status(500).json(err);
