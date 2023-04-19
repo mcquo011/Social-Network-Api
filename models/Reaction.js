@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const Types = mongoose.Types;
 
+// Define the schema for reactions to thoughts
 const reactionSchema = new Schema({
   reactionId: {
     type: Schema.Types.ObjectId,

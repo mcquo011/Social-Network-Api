@@ -1,6 +1,8 @@
 const Thought = require("../models/Thought");
 
+
 const thoughtController = {
+  // Get all thoughts
   getAllThoughts: async (req, res) => {
     try {
       const thoughts = await Thought.find({});
@@ -10,6 +12,7 @@ const thoughtController = {
     }
   },
 
+  // Create a new thought
   createThought: async (req, res) => {
     try {
       const newThought = await Thought.create(req.body);
@@ -19,6 +22,7 @@ const thoughtController = {
     }
   },
 
+  // Get a thought by its ID
   getThoughtById: async (req, res) => {
     try {
       const thought = await Thought.findById(req.params.thoughtId);
@@ -28,6 +32,7 @@ const thoughtController = {
     }
   },
 
+  // Update a thought by its ID
   updateThought: async (req, res) => {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(
@@ -41,6 +46,7 @@ const thoughtController = {
     }
   },
 
+  // Delete a thought by its ID
   deleteThought: async (req, res) => {
     try {
       await Thought.findByIdAndDelete(req.params.thoughtId);
@@ -50,6 +56,7 @@ const thoughtController = {
     }
   },
 
+  // Add a reaction to a thought by ID
   addReaction: async (req, res) => {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(
@@ -63,6 +70,7 @@ const thoughtController = {
     }
   },
 
+  // Remove a reaction from a thought by its ID and the reaction's ID
   removeReaction: async (req, res) => {
     try {
       const updatedThought = await Thought.findByIdAndUpdate(

@@ -1,6 +1,7 @@
 const User = require('../models/User');
 
 const userController = {
+  // Get all users
   getAllUsers: async (req, res) => {
     try {
       const users = await User.find({});
@@ -9,6 +10,7 @@ const userController = {
       res.status(500).json(err);
     }
   },
+  // Create a new user
   createUser: async (req, res) => {
     try {
       const newUser = await User.create(req.body);
@@ -18,16 +20,19 @@ const userController = {
     }
   },
 
+  // Get a user by their ID, and populate their thoughts and friends fields
   getUserById: async (req, res) => {
     try {
-        const user = await User.findById(req.params.userId).populate(
-          "thoughts friends"
-        );
+      const user = await User.findById(req.params.userId).populate(
+        "thoughts friends"
+      );
       res.json(user);
     } catch (err) {
       res.status(500).json(err);
     }
   },
+
+  // Update a user by their ID
   updateUser: async (req, res) => {
     try {
       const user = await User.findById(req.params.userId);
@@ -50,6 +55,7 @@ const userController = {
     }
   },
 
+  // Delete a user by their ID
   deleteUser: async (req, res) => {
     try {
       const deletedUser = await User.findByIdAndDelete(req.params.userId);
@@ -63,6 +69,8 @@ const userController = {
       res.status(500).json(err);
     }
   },
+
+  // Add a friend to a user's friends array by their ID
   addFriend: async (req, res) => {
     try {
       const currentUser = await User.findOneAndUpdate(
@@ -80,6 +88,8 @@ const userController = {
       res.status(500).json(err);
     }
   },
+
+  // Remove a friend from a user's friends array by their ID
   removeFriend: async (req, res) => {
     try {
       const currentUser = await User.findOneAndUpdate(
